@@ -74,7 +74,10 @@ def GetAnswers():
 
 def GetRandomProxy():
     proxies_file = ReadFile('proxies.txt','r')
-    proxies = {"http://":random.choice(proxies_file), "https://": random.choice(proxies_file)}
+    proxies = {
+        "http":"http://{0}".format(random.choice(proxies_file)),
+        "https":"https://{0}".format(random.choice(proxies_file))
+        }
     return proxies
 
 def login_instagram(username, password,use_proxy:int):
