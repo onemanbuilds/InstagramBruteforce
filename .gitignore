@@ -123,3 +123,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+InstagramBruteforce_v1.zip
+InstagramBruteforce_v1/InstagramBruteforce_v1.exe
+InstagramBruteforce_v1/password_list.txt
+InstagramBruteforce_v2.zip
+InstagramBruteforce_v2/InstagramBruteforce_v2.exe
+InstagramBruteforce_v2/proxies.txt
+InstagramBruteforce_v2/password_list.txt
+InstagramBruteforce_v23/InstagramBruteforce_v2.exe
+InstagramBruteforce_v23/password_list.txt
+InstagramBruteforce_v23/proxies.txt
+output/main_v2.exe
