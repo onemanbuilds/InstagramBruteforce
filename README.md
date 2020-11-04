@@ -1,6 +1,11 @@
 # InstagramBruteforce
  A lot of accounts can be hacked with bruteforce method this is a simple app which demonstrates it on instagram.
- 
+
+# Installation
+```
+pip3 install -r requirements.txt
+```  
+
 # Tool
 ![](https://i.ibb.co/zR11QzB/instabrute.png)
 
